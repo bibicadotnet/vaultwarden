@@ -7,6 +7,6 @@ services:
     environment:
       - SIGNUPS_ALLOWED=true
     ports:
-      - '1254:80'    
+      - '1254:80'
     volumes:
       - ./vaultwarden-data:/data
