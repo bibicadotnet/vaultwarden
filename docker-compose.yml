@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       - DOMAIN:https://vaultwarden.example.com  # Your domain; vaultwarden needs to know it's https to work properly with attachments
-      - SIGNUPS_ALLOWED=true   # sau khi đăng kí thì sửa lại thành false      
+      - SIGNUPS_ALLOWED=true   # sau khi đăng kí tài khoản thì sửa lại thành false      
     volumes:
       - ./vaultwarden-data:/data
 
