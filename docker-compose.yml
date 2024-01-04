@@ -5,7 +5,6 @@ services:
     container_name: vaultwarden
     restart: always
     environment:
-      - DOMAIN:https://vaultwarden.example.com
       - SIGNUPS_ALLOWED=true   
     volumes:
       - ./vaultwarden-data:/data
