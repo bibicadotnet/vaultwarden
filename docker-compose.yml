@@ -6,7 +6,18 @@ services:
     restart: always
     environment:
       - SIGNUPS_ALLOWED=true
+      - PUSH_ENABLED=true
+      - PUSH_INSTALLATION_ID=xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
+      - PUSH_INSTALLATION_KEY=xxxxx
+      - SMTP_HOST=smtp.mailgun.org
+      - SMTP_FROM=email@domain.com
+      - SMTP_FROM_NAME=[DOMAIN.COM]
+      - SMTP_PORT=587
+      - SMTP_SSL=true
+      - SMTP_USERNAME=email@domain.com
+      - SMTP_PASSWORD=xxxxxxxxx
+      - DOMAIN=https://vaultwarden.domain.com
     ports:
       - '1254:80'
     volumes:
-      - ./vaultwarden-data:/data
+      - ./data:/data 
