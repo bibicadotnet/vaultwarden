@@ -1,4 +1,4 @@
-# Vaultwarden with Cloudflare Tunnels for Oracle Away FREE
+# Vaultwarden with Cloudflare Tunnels for Oracle FREE
 ## 1. Cài đặt VPS
 Tạo 1 VPS Oracle tại US, gói miễn phí cấu hình thấp nhất VM.Standard.E2.1.Micro chạy Ubuntu 22.04, 1 GB RAM
 
@@ -103,6 +103,14 @@ crontab vaultwarden_cron
 1. Xóa DNS records cũ sub.domain.com trên Cloudflare
 2. Xóa Tunnels cũ sub.domain.com trên Cloudflare
 3. Tạo Tunnels mới trên VPS mới
+
+## 4. Lời kết
+Đây là cấu hình theo mình là đơn giản nhất để có thể vận hành Vaultwarden an toàn, về mặt lý thuyết, sử dụng Cloudflare Tunnels tương đương cho việc dùng Tailscale và Caddy để bảo mật hệ thống và tạo SSL
+
+Sau khi cài đặt xong, bạn có thể vào firewall của Oracle, đóng tất cả các port lại, chỉ mở port 443, sang firewall Cloudflare, chặn tất cả traffic từ các nước (trừ Việt Nam) còn lại các vấn đề liên quan tới bảo mật, hãy tin tưởng vào Cloudflare :]]
+
+Bước backup và restore, nếu lười cấu hình cũng có thể bỏ qua, thực tế thì Oracle có uptime cực tốt, đa phần 99.999% cho tới 100%, thi thoảng rỗi rãi, vào tài khoản export 1 file .json để dưới máy bàn cũng đủ backup sơ cua rồi
+
 
 
 
