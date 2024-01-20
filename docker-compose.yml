@@ -5,19 +5,21 @@ services:
     container_name: vaultwarden
     restart: always
     environment:
-      - SIGNUPS_ALLOWED=true
+      - SIGNUPS_ALLOWED=false
       - PUSH_ENABLED=true
-      - PUSH_INSTALLATION_ID=xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
-      - PUSH_INSTALLATION_KEY=xxxxx
+      - PUSH_INSTALLATION_ID=xxxx-xxxx-xxxx-xxxx-xxxx
+      - PUSH_INSTALLATION_KEY=xxxxxxxxxxxx
+      - TZ=Asia/Ho_Chi_Minh
       - SMTP_HOST=smtp.mailgun.org
       - SMTP_FROM=email@domain.com
       - SMTP_FROM_NAME=[DOMAIN.COM]
       - SMTP_PORT=587
       - SMTP_SSL=true
       - SMTP_USERNAME=email@domain.com
-      - SMTP_PASSWORD=xxxxxxxxx
-      - DOMAIN=https://vaultwarden.domain.com
+      - SMTP_PASSWORD=xxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxx
+      - DOMAIN=https://sub.domain.com
+      - IP_HEADER=X-Forwarded-For
     ports:
       - '1254:80'
     volumes:
-      - ./data:/data 
+      - ./data:/data
